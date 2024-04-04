@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class Main {
    public static void main(String[] args) {
+       //Управляющие конструкции
         //1. Написать программу для вывода названия поры года по номеру месяца. При решении используйте оператор switch-case
-         Scanner scanner = new Scanner(System.in);
-
+        Scanner scanner = new Scanner(System.in);
         while (true){
             System.out.println("Введите номер месяца или \"exit\" для выхода: ");
             String month = scanner.nextLine();
@@ -57,7 +57,6 @@ public class Main {
 
         //2. Написать программу для вывода названия поры года по номеру месяца. При решении используйте оператор if-else-if.
         Scanner scanner2 = new Scanner(System.in);
-
         while (true) {
             System.out.println("Введите номер месяца или \"exit\" для выхода: ");
             String month2 = scanner2.nextLine();
@@ -82,7 +81,6 @@ public class Main {
         //3. Напишите программу, которая будет принимать на вход число и на выход будет выводить сообщение четное число или нет.
         // Для определения четности числа используйте операцию получения остатка от деления - операция выглядит так: '% 2')
         Scanner scanner3 = new Scanner(System.in);
-
         while (true) {
             System.out.println("Введите чило или \"exit\" для выхода: ");
             String input1 = scanner3.nextLine();
@@ -103,7 +101,6 @@ public class Main {
         //  4. Для введенного числа t (температура на улице) вывести Если t>–5, то вывести «Тепло».
         //  Если –5>= t > –20, то вывести «Нормально». Если –20>= t, то вывести «Холодно».
         Scanner scanner4 = new Scanner(System.in);
-
         while (true) {
             System.out.println("Введите  температуру на улице или \"exit\" для выхода: ");
             String intput2 = scanner4.nextLine();
@@ -122,6 +119,50 @@ public class Main {
                 System.out.println("Холодно");
             }
         }
+
+       //2 Циклы
+       //1. При помощи цикла for вывести на экран нечетные числа от 1 до 99. При решении используйте операцию инкремента (++).
+       for (int i = 1; i <= 99; i++) {
+           System.out.println(i);
+       }
+
+       //2. Необходимо вывести на экран числа от 5 до 1. При решении используйте операцию декремента (--).
+       for (int i = 5; i >= 1; i--) {
+           System.out.println(i);
+       }
+
+       //3. Напишите программу, где пользователь вводит любое целое положительное число. А программа суммирует все числа от 1 до
+      // введенного пользователем числа. Для ввода числа воспользуйтесь классом Scanner.
+       Scanner scanner5 = new Scanner(System.in);
+       while (true) {
+           System.out.println("Введите положительное число или \"exit\" для выхода: ");
+           String input5  = scanner5.nextLine();
+           int summa = 0;
+
+           if (input5.equals("exit")) {
+               break;
+           }
+
+           int number = Integer.parseInt(input5);
+
+           if (number >= 0) {
+               for (int i = 1; i <= number; i++) {
+                   summa = summa + i;
+               }
+               System.out.println("Сумма чисел от 1 до " + number + " равна " + summa);
+           }else {
+               System.out.println("Число отрицательное, введите положительное.");
+           }
+       }
+
+      // 4. Необходимо, чтоб программа выводила на экран вот такую последовательность: 7 14 21 28 35 42 49 56 63 70 77 84 91 98.
+      // В решении используйте цикл while
+       int init = 7;
+       int numberConst = 7;
+       while (init < 100) {
+           System.out.println(init);
+           init = init + numberConst;
+       }
 
 }
 }
