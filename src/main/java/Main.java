@@ -14,41 +14,25 @@ public class Main {
             }
 
             switch (month){
-                case "1" :
-                    System.out.println("Зима");
-                     break;
-                case "2" :
+                case "1"  :
+                case "2"  :
+                case "12" :
                     System.out.println("Зима");
                     break;
                 case "3" :
-                    System.out.println("Весна");
-                    break;
                 case "4" :
-                    System.out.println("Весна");
-                    break;
                 case "5" :
                     System.out.println("Весна");
                     break;
-                case  "6" :
-                    System.out.println("Лето");
-                    break;
-                case "7" :
-                    System.out.println("Лето");
-                    break;
-                case "8" :
+                case "6" :
+                case "7"  :
+                case "8"  :
                     System.out.println("Лето");
                     break;
                 case "9" :
-                    System.out.println("Осень");
-                    break;
                 case "10" :
-                    System.out.println("Осень");
-                    break;
                 case "11" :
                     System.out.println("Осень");
-                    break;
-                case "12" :
-                    System.out.println("Зима");
                     break;
                 default:
                     System.out.println("Такой пары года нет, даём тебе еще попытачку.");
@@ -91,11 +75,8 @@ public class Main {
 
             int number = Integer.parseInt(input1);
 
-            if (number % 2 == 0) {
-                System.out.println(number + " чётное число.");
-            } else {
-                System.out.println(number + " не чётное число.");
-            }
+            System.out.println(number % 2 == 0 ? "чётное" : "не чётное");
+
         }
 
         //  4. Для введенного числа t (температура на улице) вывести Если t>–5, то вывести «Тепло».
@@ -123,11 +104,13 @@ public class Main {
        //2 Циклы
        //1. При помощи цикла for вывести на экран нечетные числа от 1 до 99. При решении используйте операцию инкремента (++).
        for (int i = 1; i <= 99; i++) {
-           System.out.println(i);
+           if(i % 2 == 1) {
+               System.out.println(i);
+           }
        }
 
        //2. Необходимо вывести на экран числа от 5 до 1. При решении используйте операцию декремента (--).
-       for (int i = 5; i >= 1; i--) {
+       for (int i = 5; i > 0; i--) {
            System.out.println(i);
        }
 
