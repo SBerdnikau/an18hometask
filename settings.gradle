@@ -1,5 +1,9 @@
 rootProject.name = 'an18hometask'
-include 'lesson3'
 include 'lesson1'
+include 'lesson3'
+include 'lesson4'
+include 'lesson5'
 include 'lesson7'
+
+
 
