@@ -41,22 +41,19 @@ public class User {
         this.experience = experience;
     }
 
-    public double getSalary(Profession profession) {
-        double coefficientDir = 0.65;
-        double coefficientWorker = 0.55;
-        double coefficientHr = 0.25;
-        double coefficient = 0;
+    public double getSalary() {
+       double coefficient = 0;
         switch (profession) {
             case DIRECTOR : {
-                coefficient = coefficientDir;
+                coefficient =  profession.getCoefficient();
                 break;
             }
             case WORKER : {
-                coefficient = coefficientWorker;
+                coefficient = profession.getCoefficient();
                 break;
             }
             case HR: {
-                coefficient = coefficientHr;
+                coefficient = profession.getCoefficient();
                 break;
             }
         }
@@ -64,13 +61,13 @@ public class User {
     }
 
     public double getAdditionalSalary(double additionalSalary) {
-        double currentSalary = getSalary(profession);
+        double currentSalary = getSalary();
         return currentSalary + additionalSalary;
     }
 
     public String toString() {
         return "Name:" + name + "\tProfession:" + profession + "\tStage:" + experience +
-                "\tSalary:" + getSalary(profession) ;
+                "\tSalary:" + getSalary() ;
      }
 
 }
